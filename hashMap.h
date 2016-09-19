@@ -10,13 +10,14 @@
 
 class hashMap{
 public:
+	hashMap(size);
 	hashMap();
 	~hashMap();
 	bool set(std::string key, int *value);
 	void get(std::string key);
 	void delete_node(std::string key);
 	float load();
-	int size = 64;
+	int size;
 private:
 	struct hashNode{
 		std::string key;
