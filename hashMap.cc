@@ -11,7 +11,7 @@ hashMap::hashMap(){
 
 }
 
-hashMap::hashMap(sizein){
+hashMap::hashMap(int sizein){
 	int size = sizein;
 	hashNode *hMap = new hashNode[size];
 

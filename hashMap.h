@@ -10,7 +10,7 @@
 
 class hashMap{
 public:
-	hashMap(size);
+	hashMap(int sizein);
 	hashMap();
 	~hashMap();
 	bool set(std::string key, int *value);
