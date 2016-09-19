@@ -6,7 +6,29 @@
 #ifndef HASHMAP_H
 #define HASHMAP_H
 
+/*
+bool set(key, value)
+get(key)
+delete(key)
+float(load)
+*/
+/*
+struct hashNode{
+		std::string key;
+		void *value;
+		hashNode *prev;
+		hashNode *next;
 
+		hashNode(std::string key, void *value){
+
+			this->key = key;
+			this->value = NULL;
+			this->next = NULL;
+			this->prev = NULL;
+		}
+	};
+
+*/
 
 class hashMap{
 public:
@@ -19,13 +41,7 @@ public:
 	float load();
 	int size;
 private:
-	struct hashNode{
-		std::string key;
-		int *value;
-		hashNode *prev;
-		hashNode *next;
-	};
-	hashNode *hMap;
+	hashNode* hMap;
 
 
 };
