@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <iostream>
 #define SIZE 64;
+#include "hashMap.cc"
 
 
 class hashMap{
@@ -13,13 +14,12 @@ public:
 	void get(std::string key);
 	void delete(key);
 	float load();
-private:
 	struct hashNode{
 		std::string key;
 		int *value;
-		int *prev;
-		int *next;
-	}
+		struct *prev;
+		struct *next;
+	};
 
 
 }
