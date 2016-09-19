@@ -11,10 +11,13 @@ hashMap::hashMap(SIZE){
 hashMap::~hashMap(){
 	for(i=0; i<SIZE-1; i++){
 
-		hashNode* node = hMap[i]
-		while(node){
-			hashNode *prev 
+		hashNode* cur = hMap[i]
+		while(cur){
+			hashNode *prev = cur;
+			cur = cur->next;
+			delete prev;
 		}
 	}
-
+	delete[] hMap;
 }
+
