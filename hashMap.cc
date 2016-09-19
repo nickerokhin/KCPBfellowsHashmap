@@ -3,11 +3,7 @@
 hashMap::hashMap(){
 
 	hashNode *hMap = new hashNode[64]; //Creates struct array of struct hashNode with size 64
-/*
-	for (int i=0; i<size; i++){
-		hMap[i] = NULL;
-	}
-	*/
+
 
 }
 
