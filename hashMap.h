@@ -16,6 +16,7 @@ public:
 	void get(std::string key);
 	void delete_node(std::string key);
 	float load();
+	int size = 64;
 private:
 	struct hashNode{
 		std::string key;
@@ -23,6 +24,7 @@ private:
 		hashNode *prev;
 		hashNode *next;
 	};
+	hashNode *hMap;
 
 
 };

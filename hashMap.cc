@@ -2,17 +2,18 @@
 
 hashMap::hashMap(){
 
-	hashNode hMap[64];
-
-	for (int i=0; i<SIZE; i++){
+	hashNode *hMap = new hashNode[size]; //Creates array hMap of size 64
+/*
+	for (int i=0; i<size; i++){
 		hMap[i] = NULL;
 	}
+	*/
 
 }
 
 hashMap::~hashMap(){
 	
-	for(int i=0; i<SIZE; i++){
+	for(int i=0; i<size; i++){
 
 		hashNode* cur = hMap[i];
 		while(cur){
@@ -21,7 +22,7 @@ hashMap::~hashMap(){
 			delete prev;
 		}
 	}
-	delete[] hMap;
+	delete [] hMap;
 	
 }
 
