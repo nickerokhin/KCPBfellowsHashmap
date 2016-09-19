@@ -1,25 +1,30 @@
 //Hashmap
 
 #include <stdio.h>
+#include <string>
 #include <iostream>
-#define SIZE 64;
-#include "hashMap.cc"
+#ifndef HASHMAP_H
+#define HASHMAP_H
+
 
 
 class hashMap{
 public:
-	hashMap(int size);
+	hashMap();
 	~hashMap();
 	bool set(std::string key, int *value);
 	void get(std::string key);
-	void delete(key);
+	void delete_node(std::string key);
 	float load();
+private:
 	struct hashNode{
 		std::string key;
 		int *value;
-		struct *prev;
-		struct *next;
+		hashNode *prev;
+		hashNode *next;
 	};
 
 
-}
+};
+
+#endif

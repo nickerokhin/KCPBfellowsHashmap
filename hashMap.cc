@@ -1,17 +1,20 @@
-hashMap::hashMap(SIZE){
+#include "hashMap.h"
 
-	hashNode hMap[SIZE];
+hashMap::hashMap(){
 
-	for (int i=0; i<SIZE-1; i++){
+	hashNode hMap[64];
+
+	for (int i=0; i<SIZE; i++){
 		hMap[i] = NULL;
 	}
 
 }
 
 hashMap::~hashMap(){
-	for(i=0; i<SIZE-1; i++){
+	
+	for(int i=0; i<SIZE; i++){
 
-		hashNode* cur = hMap[i]
+		hashNode* cur = hMap[i];
 		while(cur){
 			hashNode *prev = cur;
 			cur = cur->next;
@@ -19,5 +22,7 @@ hashMap::~hashMap(){
 		}
 	}
 	delete[] hMap;
+	
 }
+
 
