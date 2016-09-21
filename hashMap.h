@@ -20,19 +20,19 @@ struct hashNode{
 	void * value;
 	hashNode *next;
 	hashNode *prev;
-	hashNode(std::string k, void * v){
-		key = k;
-		value = v;
+	hashNode(){
+		key;
+		value;
 		next = NULL;
 		prev = NULL;
 	}
-}
+};
 
 class hashMap{
 public:
 	hashMap();
 	~hashMap();
-	bool set(std::string inkey, int *invalue);
+	bool set(std::string inkey, void *invalue);
 	int hash(std::string inkey);
 	int* get(std::string inkey);
 	void delete_node(std::string key);
