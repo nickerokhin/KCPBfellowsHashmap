@@ -2,18 +2,22 @@
 
 hashMap::hashMap(){
 
-	hashNode* hMap = new hashNode[64]; //Dynamically allocates a size 64 array of hashNodes
+	hashNode * hMap[64];
+	for(int i = 0; i<64; i++){
+		hMap[i] = NULL;
+	} 
 
 }
 
 hashMap::hashMap(int sizein){
-	/*
+/*
 	int size = sizein;
-	hashNode **hMap = new hashNode*[size]; //Creates struct array of struct hashNode with size 64
+	hashNode *hMap = new hashNode*[size]; //Creates struct array of struct hashNode with size 64
 	for(int i = 0; i<size; i++){
 		hMap[i] = NULL;
 	}
 */
+
 }
 
 hashMap::~hashMap(){

@@ -12,13 +12,14 @@ get(key)
 delete(key)
 float(load)
 */
-/*
+
 struct hashNode{
 		std::string key;
 		void *value;
 		hashNode *prev;
 		hashNode *next;
 
+		hashNode(){};
 		hashNode(std::string key, void *value){
 
 			this->key = key;
@@ -28,7 +29,7 @@ struct hashNode{
 		}
 	};
 
-*/
+
 
 class hashMap{
 public:
