@@ -70,6 +70,17 @@ int* hashMap::get(std::string inkey){
 		return hMap[hash].value;
 	}
 
+	else if(hMap[hash].key != inkey){
+		hashNode* cur = hMap[hash];
+		while(cur->next != NULL){
+			if(cur->key = inkey){
+				return cur->value;
+			}
+			cur = cur->next;
+		}
+
+	}
+	else{return false;}
 
 }
 

@@ -5,9 +5,9 @@ int main(){
 
 	hashMap *hMap = new hashMap;
 	//delete hMap;
-
-	for(int i = 0; i<SIZE; i++){
-		std::cout<<hMap[i].value<<std::endl;
-	}
+	int random = 8;
+	int *succ = &random;
+	hMap->set("succ", succ);
+	hMap->get("succ");
 
 }

@@ -33,7 +33,7 @@ public:
 	hashMap();
 	~hashMap();
 	bool set(std::string inkey, int *invalue);
-	int hash(std::string key);
+	int hash(std::string inkey);
 	int* get(std::string inkey);
 	void delete_node(std::string key);
 	float load();
