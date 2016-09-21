@@ -34,11 +34,12 @@ public:
 	~hashMap();
 	bool set(std::string inkey, int *invalue);
 	int hash(std::string key);
-	int* get(std::string key);
+	int* get(std::string inkey);
 	void delete_node(std::string key);
 	float load();
 private:
 	hashNode * hMap;
+	int counter;
 
 /*
 		hashNode(std::string key, void *value){

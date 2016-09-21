@@ -42,24 +42,37 @@ int hashMap::hash(std::string key)
 }
 
 
-bool hashMap::set(std::string key, void *valuein){
-	int hash = hash(key);
+bool hashMap::set(std::string inkey, void *valuein){
+	int hash = hash(inkey);
 	if(hMap[hash].value = NULL && hMap[hash].key == NULL && hMap[hash].next == NULL){
 		hMap[hash].value = valuein;
 		hMap[hash].key = inkey;
+		return true;
 	}
 
 	if(hMap[hash].next != NULL){
 		hashNode* cur = hMap[hash];
 		while(cur->next != NULL){
+			if (cur->next == NULL){
+				cur->value = valuein;
+				cur->key = keyin;
+				return true;
+			}
 			cur = cur->next;
-			if (cur->next == NULL)
-
 		}
+	}
+	else{sreturn false;}
+}
+
+int* hashMap::get(std::string inkey){
+	int hash = hash(key);
+	if(hMap[hash].key == key){
+		return hMap[hash].value;
 	}
 
 
-
 }
+
+
 
 
